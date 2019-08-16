@@ -7,8 +7,10 @@ const resUrl = require('./const').resUrl
 const fs = require('fs')
 
 function createVoice (req, res) {
-  const text = '我的头可不是面团捏的，你可得把劲全使出来啊'
-  const lang = 'cn'
+  const text=req.query.text
+  const lang=req.query.lang
+  // const text = '我的头可不是面团捏的，你可得把劲全使出来啊'
+  // const lang = 'cn'
   let engineType = 'intp65'
   if (lang.toLowerCase() === 'en') {
     engineType = 'intp65_en'
